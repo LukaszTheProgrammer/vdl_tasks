@@ -29,4 +29,4 @@ from
     on CHAR_LENGTH(Characters.name)
        -CHAR_LENGTH(REPLACE(Characters.name, '|', ''))>=numbers.n-1
 order by
-  id, numbers.n;
+  Characters.id, numbers.n;

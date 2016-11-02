@@ -32,7 +32,6 @@ public class PopularPhrasesFinderTest {
         if (!(new File(GENERATED_PHRASES_FILENAME).exists())) {
             new PhrasesFileGenerator(initParameters()).generate();
         }
-
         startTime = System.currentTimeMillis();
     }
 
