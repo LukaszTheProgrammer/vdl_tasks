@@ -84,7 +84,7 @@ public class DuplicateNumberFinder {
     }
 
     private void storeInFileChunks(List<Long> phoneNumbers, List<BufferedWriter> writers) {
-        phoneNumbers.stream().forEach(phoneNumber -> storeInFileChunk(phoneNumber, writers));
+        phoneNumbers.forEach(phoneNumber -> storeInFileChunk(phoneNumber, writers));
     }
 
     private void storeInFileChunk(Long phoneNumber, List<BufferedWriter> writers) {
