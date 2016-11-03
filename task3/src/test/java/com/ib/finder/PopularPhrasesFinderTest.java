@@ -23,8 +23,10 @@ import static org.junit.Assert.assertEquals;
  */
 public class PopularPhrasesFinderTest {
     private static final String WORKING_DIR = System.getProperty("user.dir");
-    private static final String GENERATED_PHRASES_FILENAME = WORKING_DIR + "/phrasesFile.txt";
-    private static final String DICTIONARY_FILE_LOCATION = WORKING_DIR + "/src/test/resources/dictionary.txt";
+    private static final String SEP = File.separator;
+    private static final String GENERATED_PHRASES_FILENAME = WORKING_DIR + SEP + "phrasesFile.txt";
+    private static final String RESOURCES_DIR = SEP + "src" + SEP + "test" + SEP + "resources" + SEP;
+    private static final String DICTIONARY_FILE_LOCATION = WORKING_DIR + RESOURCES_DIR + "dictionary.txt";
     private long startTime;
 
     @Before

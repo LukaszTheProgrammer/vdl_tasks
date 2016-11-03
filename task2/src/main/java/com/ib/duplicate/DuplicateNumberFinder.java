@@ -25,9 +25,10 @@ import static java.util.stream.Collectors.toList;
  * Created by lukasz.odulinski on 30.10.2016.
  */
 public class DuplicateNumberFinder {
-    public static final String CHUNK_FILES_FOLDER = getProperty("user.dir") + "/tmp/";
-    public static final int CHUNK_SIZE = 50_000_000;
-    public static final int CHUNKS_COUNT = 200;
+    private static final String SEP = File.separator;
+    private static final String CHUNK_FILES_FOLDER = getProperty("user.dir") + SEP + "tmp" + SEP;
+    private static final int CHUNK_SIZE = 50_000_000;
+    private static final int CHUNKS_COUNT = 200;
 
     public Optional<String> find(String filename) throws IOException {
         prepareChunkFilesFolder();
