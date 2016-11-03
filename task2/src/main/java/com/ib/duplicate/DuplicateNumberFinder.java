@@ -53,7 +53,7 @@ public class DuplicateNumberFinder {
             while (blockReader.hasMore()) {
                 storeInFileChunks(extractNumbers(blockReader.nextBlock()), chunkWriters);
             }
-            chunkWriters.stream().forEach(this::close);
+            chunkWriters.forEach(this::close);
             logMemoryUsage();
         }
 
